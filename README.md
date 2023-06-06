@@ -8,7 +8,6 @@ Aplikaciji će moći pristupiti svi korisnici koji imaju internet i internet pre
 Stvorit će se jedna centralna baza podataka o knjigama dostupna svima. Korisnici kada budu htjeli potražiti informacije o knjigama neće više morati pretraživati putem Google-a i koristiti više izbora za dobivanje informacija o nekoj knjizi jer će kroz aplikaciju moći dobiti sve potrebne informacije na jednom mjestu. Aplikacija će biti dostupna putem interneta, zahvaljujući tome korisnik ima mogućnost korištenja aplikacije u bilo koje vrijeme. 
 2.	Zahtjevi
 2.1	Funkcijski zahtjevi
-<Koje sve glavne funkcije, tj. operacije treba moći obavljati aplikacija, tj. što se sve treba moći napraviti pomoću aplikacije – ovdje navesti ukratko, a detaljni opis će ići pod korisničke zahtjeve>
 
 Aplikacija mora omogućiti spremanje, uređivanje, pretraživanje, prikaz, traženje i brisanje knjiga u bazi podataka. 
 2.2	Sistemski, hardverski i mrežni zahtjevi
