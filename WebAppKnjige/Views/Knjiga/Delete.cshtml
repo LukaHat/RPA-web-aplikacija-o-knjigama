@@ -1,0 +1,55 @@
+﻿@model WebAppKnjige.Models.Knjiga
+
+<h1>View HTML stranica - Brisanje</h1>
+<h2> Brisanje knjige: @Model.NazivKnjige</h2>
+<h4>Jeste li sigurni u brisanje iznad navedene knjige?</h4>
+<div>
+    <h4>Knjiga</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NazivKnjige)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NazivKnjige)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ImeAutora)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ImeAutora)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.GodinaIzlaska)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GodinaIzlaska)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cijena)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cijena)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Kategorija)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Kategorija.Naziv)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SlikaUrl)
+        </dt>
+        <dd class="col-sm-10">
+            <img src="@Html.DisplayFor(model => model.SlikaUrl)" width="100" height="100" alt="@Html.DisplayFor(model => model.NazivKnjige)" />
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Obriši" class="btn btn-danger" />
+        <a asp-action="Index">Natrag na popis knjiga</a>
+    </form>
+</div>
+

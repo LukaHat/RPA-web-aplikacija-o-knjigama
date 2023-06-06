@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Knjiga>
+
+<link rel="stylesheet" href="/css/site.css">
+<h1>Tražilica knjiga</h1>
+
+<a asp-action="Create" class="btn btn-success"> Unesi novu seriju</a>
+@using (Html.BeginForm("SearchIndex", "Knjiga", FormMethod.Get))
+{
+    <p>
+        Žanr: @Html.DropDownList("knjigaZanr", (IEnumerable<SelectListItem>)ViewBag.Genres, "Svi žanrovi", new { @class = "dropdown-list" })
+        Naziv: @Html.TextBox("searchString", null, new { @class = "searchString" })
+
+        <input type="submit" value="Traži" class="btn btn-info" />
+
+    </p>
+}
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">@Html.DisplayNameFor(model => model.SlikaUrl)</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.Id)</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.ImeAutora)</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.NazivKnjige)</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.GodinaIzlaska)</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.Cijena)</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.Kategorija)</th>
+            <th>Radnje nad podacima</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> <img src="@Html.DisplayFor(modelItem => item.SlikaUrl)" width="150" height="200" alt="@Html.DisplayFor(modelItem => item.NazivKnjige)" /> </td>
+                <th scope="row">@Html.DisplayFor(modelItem => item.Id)</th>
+                <td>@Html.DisplayFor(modelItem => item.NazivKnjige)</td>
+                <td>@Html.DisplayFor(modelItem => item.ImeAutora)</td>
+                <td>@Html.DisplayFor(modelItem => item.Cijena)</td>
+                <td>@Html.DisplayFor(modelItem => item.Kategorija.Naziv)</td>
+                <td><a asp-action="Update" asp-route-id="@item.Id" class="btn btn-info"> Uredi</a> | <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Obriši</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
