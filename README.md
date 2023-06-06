@@ -10,7 +10,7 @@ Stvorit će se jedna centralna baza podataka o knjigama dostupna svima. Korisnic
 2.1	Funkcijski zahtjevi
 <Koje sve glavne funkcije, tj. operacije treba moći obavljati aplikacija, tj. što se sve treba moći napraviti pomoću aplikacije – ovdje navesti ukratko, a detaljni opis će ići pod korisničke zahtjeve>
 
-Aplikacija mora omogućiti spremanje, uređivanje, pretraživanje, prikaz, traženje i brisanje filmova u bazi podataka. 
+Aplikacija mora omogućiti spremanje, uređivanje, pretraživanje, prikaz, traženje i brisanje knjiga u bazi podataka. 
 2.2	Sistemski, hardverski i mrežni zahtjevi
 Budući da će aplikacija biti razvijena u ASP.NET Core MVC-u ona treba biti smještena na Microsoft Web poslužitelju (eng. server). Preporučuju se sljedeće hardverske specifikacije:
 Minimum četverojezgreni procesor 2.2 GHz
@@ -49,13 +49,13 @@ Kada posjetitelj stranice pregledava knjige koji se nalaze u web aplikaciji, odv
 1.	Posjetitelj dolazi na početnu stranicu web mjesta kao anonimni korisnik ili klikne na link Početna stranica u izborniku ako se nalazio na drugoj stranici na istom web mjestu.
 2.	Početna stranica prikazuje osnovni opis web aplikacije i sadrži gumbe za prikaz, pretraživanje i dodavanje novih knjiga. 
 3.	Prikaz osnovnih informacija o razvojnom timu moguće je dobiti putem stranica O nama i Kontakt.
-4.	Ako anonimni korisnik želi vidjeti sve Filmove u bazi, mora kliknuti na link Popis knjiga u glavnom izborniku ili gumb prikaži na Početnoj stranici.
+4.	Ako anonimni korisnik želi vidjeti sve knjige u bazi, mora kliknuti na link Popis knjiga u glavnom izborniku ili gumb prikaži na Početnoj stranici.
 5.	Web aplikacija prikazuje popis knjiga. Za svaku knjigu se prikazuje Naziv knjige, Ime Autora, Godina izlaska knnjige, Žanr te Cijena.
 6.	Ako anonimni korisnik želi pretraživati Knjige u bazi po Žanru i Nazivu, mora kliknuti na link Tražilica knjiga u glavnom izborniku.
 7.	 Ako anonimni korisnik želi vidjeti detalje knjige, mora kliknuti na link Detalji za tu knjigu.
-8.	Web aplikacija prikazuje detalje odabranog filma –Naziv knjige, Datum izlaska knjige, Žanr te Cijenu.
+8.	Web aplikacija prikazuje detalje odabranog knjiga –Naziv knjige, Datum izlaska knjige, Žanr te Cijenu.
 2.5.2.	Slučaj korištenja 2: Dodavanje nove knjige
-Svi korisnici trebaju moći dodati novi Film. Kada korisnik dodaje novi Film, sljedeći koraci se odvijaju:
+Svi korisnici trebaju moći dodati novu knjigu. Kada korisnik dodaje novu knjigu, sljedeći koraci se odvijaju:
 1.	Korisnik klikne na gumb Unos na Početnoj stranici ili na link Nova knjiga na stranicama Popis knjiga ili Tražilica knjiga.
 2.	Korisnik upisuje podatke o novoj knjizi.
 3.	Korisnik klikne na gumb Spremi.
@@ -63,7 +63,7 @@ Svi korisnici trebaju moći dodati novi Film. Kada korisnik dodaje novi Film, sl
 2.5.3.	 Slučaj korištenja 3: Uređivanje knjige
 
 Kada korisnik uređuje knjigu, sljedeći koraci se odvijaju:
-1.	Korisnik klikne na link Uredi u popisu filmova na stranicama Popis knjiga ili  Tražilica knjiga.
+1.	Korisnik klikne na link Uredi u popisu knjiga na stranicama Popis knjiga ili  Tražilica knjiga.
 2.	Korisnik mijenja postojeće podatke o knjizi.
 3.	Korisnik klikne gumb Spremi promjene.
 4.	Ako su upisani podaci točni, web aplikacija sprema promjene u bazi i prikazuje stranicu za Popis knjiga.
