@@ -69,9 +69,9 @@ Kada korisnik uređuje knjigu, sljedeći koraci se odvijaju:
 4.	Ako su upisani podaci točni, web aplikacija sprema promjene u bazi i prikazuje stranicu za Popis knjiga.
 
 2.5.4.	Slučaj korištenja 4: Brisanje knjiga
-Kad korisnik briše Filmove iz baze podataka web aplikacije, sljedeći koraci se odvijaju:
+Kad korisnik briše knjige iz baze podataka web aplikacije, sljedeći koraci se odvijaju:
 
-1.	Korisnik klikne na link Obriši u popisu filmova na stranicama Popis knjiga ili  Tražilica knjiga.
+1.	Korisnik klikne na link Obriši u popisu knjiga na stranicama Popis knjiga ili  Tražilica knjiga.
 2.	Web aplikacija zahtijeva potvrdu o brisanju knjiga.
 3.	Ako korisnik potvrđuje brisanje, knjiga je uklonjen iz baze.
 4.	Web aplikacija prikazuje stranicu Popis knjiga.
